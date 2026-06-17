@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Harry Porlotes y pieda de C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            background-color: #e0f7fa;
+            border-left: 4px solid #00acc1;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: transform 0.5s ease;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #00acc1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #007c91;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .girar {
+            animation: giro 3s linear;
+        }
+
+        @keyframes giro {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Harry Porlotes y piedra de C++</h1>
+
+    <p>El niño huérfano Harry vive con sus tíos, que lo tratan muy mal (le hacen utilizar Internet Explorer).</p>
+    <p>Harry tiene unas gafas redondas a lo John Lennon y una cicatriz de una manzana mordida en la frente.</p>
+    <p>Un día, aparece Juan Nieve, el del Muro, y le dice que él también puede ser un informático. Así que lo saca de
+        su zulito para meterlo en otro peor... y se lo lleva a un colegio de ingenieros llamado DAM/DAW el zulo de la planta baja.</p>
+    <p>Allí conoce a sus amigos RomLinux y HermiMac, y vive sus primeras aventuras desarrollando código.</p>
+
+    <img src="https://fotografias.antena3.com/clipping/cmsimages02/2017/04/12/A12E6370-5792-4F46-A1F1-B4771F41732B/70.jpg?crop=1140,641,x0,y0&width=480&height=270&optimize=high&format=webply" alt="Imagen de Harry Porlotes">
+
+    <button onclick="mostrarMensaje()">Haz clic para un hechizo divertido</button>
+
+    <footer>
+        &copy; 2025 Harry Porlotes y La Red Neuronal. Hecho con humor y un poco de magia.
+    </footer>
+
+    <script>
+        function mostrarMensaje() {
+            alert("¡Wingardium Leviosa tu ratón y a programar sin miedo!");
+
+            const parrafos = document.querySelectorAll("p");
+            parrafos.forEach(p => p.classList.add("girar"));
+
+            setTimeout(() => {
+                parrafos.forEach(p => p.classList.remove("girar"));
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>
